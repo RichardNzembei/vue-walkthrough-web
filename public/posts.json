@@ -1,0 +1,35 @@
+ {
+    "posts": [
+    {
+      "id": 1,
+      "title": "Sakata Dimba",
+      "date": "September 15, 2024",
+      "time": "3:00 PM",
+      "location": "Nairobi, Kenya",
+      "description":
+        "A local football tournament where the top teams from Nairobi battle it out for the championship.",
+      "imageUrl": "@/assets/images/UI.png"
+    },
+    {
+      "id": 2,
+      "title": "Gez Rivals",
+      "date": "October 3, 2024",
+      "time": "6:00 PM",
+      "location": "Addis Ababa, Ethiopia",
+      "description":
+        "The Gez rivals, an intense football match between the two biggest teams in Ethiopia, attracts thousands of fans annually.",
+      "imageUrl": "path/to/gez-rivals-image.jpg"
+    },
+    {
+      "id": 3,
+      "title": "La Liga Derby",
+      "date": "November 10, 2024",
+      "time": "8:00 PM",
+      "location": "Madrid, Spain",
+      "description":
+        "The La Liga derby between Real Madrid and Atlético Madrid, one of the fiercest rivalries in European football.",
+      "imageUrl": "path/to/laliga-derby-image.jpg"
+    }
+  ]
+}
+  
