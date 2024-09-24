@@ -1,0 +1,26 @@
+{
+   "students": [
+{
+    "name": "Richard Nzembei",
+    "yearOfStudy": "3rd year",
+    "major": "computer science"
+},
+{
+    "name": "Doreen Chelule",
+    "yearOfStudy": "1st year",
+    "major": "clinical med"
+},
+{
+    "name": "Elan wendy",
+    "yearOfStudy": "3rd year",
+    "major": "Education Arts"
+},
+{
+    "name": "collins kimutai",
+    "yearOfStudy": "3rd year",
+    "major": "computer science"
+}
+    ]
+
+  }
+  
