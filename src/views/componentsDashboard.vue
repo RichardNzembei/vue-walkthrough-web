@@ -1,14 +1,19 @@
 <script setup>
+import { ref } from "vue";
 import componentCard from "@/components/componentCard.vue";
-import {useRouter} from 'vue-router'
-const router=useRouter()
-const toHomePage=()=>{
-    router.push('/')
+import { useRouter } from "vue-router";
+const router = useRouter();
+const toHomePage = () => {
+  router.push("/");
+};
+const tobasicscard = () => {
+  router.push("/basicsdashboard");
+};
+const msg = ref("");
+function handlemsg(data) {
+  msg.value = data;
+  alert(msg.value);
 }
-const tobasicscard=()=>{
-    router.push('/basicsdashboard')
-}
-function hanldebuttonclick() {}
 </script>
 <template>
   <div class="basicsProjects">
@@ -16,7 +21,7 @@ function hanldebuttonclick() {}
     <button @click="toComponentsPage">next</button>
     <h3>Components Implementations</h3>
     <span>step by step</span>
-    <componentCard />
+    <componentCard @view="handlemsg" />
   </div>
 </template>
 <style scoped>

@@ -1,11 +1,11 @@
 <script setup>
-import { reactive, ref, computed,defineEmits, onMounted} from "vue";
+import { reactive, ref, computed, defineEmits, onMounted } from "vue";
 
-const emit=defineEmits(['render'])
-function render(){
-  emit('render', students)
+const emit = defineEmits(["render"]);
+function render() {
+  emit("render", students);
 }
-const students=reactive([])
+const students = reactive([]);
 const fetchstudentData = async () => {
   try {
     const response = await fetch("/students.json");
@@ -20,10 +20,10 @@ const fetchstudentData = async () => {
   }
 };
 
-onMounted(async()=>{
-  const studentData=await fetchstudentData()
-  Object.assign(students,studentData)
-})
+onMounted(async () => {
+  const studentData = await fetchstudentData();
+  Object.assign(students, studentData);
+});
 </script>
 <template>
   <div class="list">
@@ -31,22 +31,21 @@ onMounted(async()=>{
     <span>click render to display list in outputs</span>
     <button @click="render">render list</button>
   </div>
- 
 </template>
 
 <style scoped>
-.list{
+.list {
   background-color: aliceblue;
   padding: 5px 5px;
-  margin: 5px 5px ;
+  margin: 5px 5px;
   width: 300px;
 }
-h4{
-    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-    text-decoration: underline;
-    font-size: 20px;
+h4 {
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+  text-decoration: underline;
+  font-size: 20px;
 }
-button{
-  margin: 5px ;
+button {
+  margin: 5px;
 }
 </style>

@@ -1,30 +1,36 @@
 <script setup>
 import { onMounted, ref } from "vue";
+const loading = ref(false);
 const fetchEventdata = async () => {
   try {
+    loading.value = true;
     const response = await fetch("/posts.json");
     if (!response.ok) {
       throw new Error(`HTTP error : ${response.ststus}`);
     }
     const data = await response.json();
+    await new Promise((resolve) => setTimeout(resolve, 2000));
     return data.posts;
   } catch (error) {
     console.log("error fetching events data");
     return [];
+  } finally {
+    loading.value = false;
   }
 };
 const posts = ref([]);
 onMounted(async () => {
   posts.value = await fetchEventdata();
 });
-
-const emits = defineEmits(["buttonClicked"]);
-const sendEvent = () => {
-  emits("buttonClicked", "you Joined the event");
+const message = ref("welcome to the events dashboard");
+const emit = defineEmits(["view"]);
+const view = () => {
+  emit("view", message.value);
 };
 </script>
 <template>
-  <div class="posts">
+  <div v-if="loading" class="spinner"></div>
+  <div class="posts" v-if="!loading && posts.length">
     <div class="blogposts" v-for="post in posts" :key="post.title">
       <h4>{{ post.title }}</h4>
 
@@ -34,13 +40,14 @@ const sendEvent = () => {
       ><br />
       <span><span class="postsAbout">Location:</span>{{ post.location }}</span>
       <p>{{ post.description }}</p>
-      <button @click="sendEvent">join</button>
+      <button @click="view">View</button>
     </div>
   </div>
 </template>
 <style scoped>
 .posts {
   display: flex;
+  justify-content: center;
 }
 .postsAbout {
   font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
@@ -73,5 +80,23 @@ button {
 }
 p {
   padding: 30px;
+}
+.spinner {
+  border: 8px solid #f3f3f3;
+  border-top: 8px solid #3498db;
+  border-radius: 50%;
+  width: 60px;
+  height: 60px;
+  animation: spin 1.5s linear infinite;
+  margin: 20px auto;
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
 }
 </style>
