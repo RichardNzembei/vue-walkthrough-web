@@ -1,5 +1,6 @@
 <script setup>
 import { useRouter } from "vue-router";
+import menucard from "@/components/menucard.vue";
 const router = useRouter();
 const toBasicsCard = () => {
   router.push("/basicsdashboard");
@@ -16,6 +17,7 @@ const toRoutingCard = () => {
     <div class="profile">
       <h3>My vue js WAlkthrough</h3>
     </div>
+    <menucard />
     <span class="message"
       >click <strong class="messageId"> implementations </strong> to view
       examples!</span

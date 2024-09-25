@@ -3,6 +3,7 @@ import landingPage from "@/views/landingPage.vue"
 import basicsDashboard from "@/views/basicsDashboard.vue"
 import componentsDashboard from "@/views/componentsDashboard.vue"
 import routingDashboard from "@/views/routingDashboard.vue"
+import projectsDashboard from "@/views/projectsDashboard.vue"
 const routes=[
     {
         path:'/',
@@ -23,6 +24,11 @@ const routes=[
         path:'/routingdashboard',
         name:'routingDashboard',
         component:routingDashboard
+    },
+    {
+        path:'/projectsdashboard',
+        name:'projectsDashboard',
+        component:projectsDashboard
     }
 
 ]

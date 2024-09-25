@@ -14,8 +14,10 @@
 Visit: [Vue learning App](https://vue-walkthrough-web.onrender.com/)
 # UI
 **Home page**
-![homepage UI](./src/assets/images/homepageUI.png)
+![homepage UI](./src/assets/images/homepage.png)
 **Basics page**
-![basicpage UI](./src/assets/images/basicspageUI.png)
+![basicpage UI](./src/assets/images/basicspage.png)
 **components page**
 ![componentspage UI](./src/assets/images/componentspageUI.png)
+**Routing Diagram Page**
+![Routingpage UI](./src/assets/images/routingpage.png)
