@@ -7,12 +7,19 @@ const toBasicsCard = () => {
 const toComponentsCard = () => {
   router.push("/componentsdashboard");
 };
+const toRoutingCard = () => {
+  router.push("/routingdashboard");
+};
 </script>
 <template>
   <div class="welcome">
     <div class="profile">
       <h3>My vue js WAlkthrough</h3>
     </div>
+    <span class="message"
+      >click <strong class="messageId"> implementations </strong> to view
+      examples!</span
+    ><br />
     <div class="guide">
       <div class="sections">
         <h4>vue Basic</h4>
@@ -40,21 +47,44 @@ const toComponentsCard = () => {
         </ul>
         <button @click="toComponentsCard">Implementations</button>
       </div>
+      <div class="sections">
+        <h4>vue Routing</h4>
+        <ul>
+          <li>Dynamic Route</li>
+          <li>Named Routes</li>
+          <li>nested Routes</li>
+          <li>Programmatic Nav</li>
+          <li>Named Views</li>
+          <li>Components</li>
+          <li>Passing props</li>
+        </ul>
+        <button @click="toRoutingCard">Implementations</button>
+      </div>
       <div class="projects"></div>
     </div>
   </div>
 </template>
 <style scoped>
+.message {
+  justify-content: center;
+  display: flex;
+  margin: 10px;
+}
+.messageId {
+  margin: 2px 10px;
+}
 .welcome {
   background-color: azure;
   padding: 10px 10px;
   margin: 20px;
   justify-content: center;
+  height: 100%;
 }
 .guide {
   background-color: white;
   display: flex;
   justify-content: center;
+  margin: 50px;
 }
 .profile {
   background-color: rgb(4, 44, 44);

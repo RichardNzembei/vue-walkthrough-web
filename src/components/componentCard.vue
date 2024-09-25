@@ -9,7 +9,7 @@ const fetchEventdata = async () => {
       throw new Error(`HTTP error : ${response.ststus}`);
     }
     const data = await response.json();
-    await new Promise((resolve) => setTimeout(resolve, 2000));
+    await new Promise((resolve) => setTimeout(resolve, 1000));
     return data.posts;
   } catch (error) {
     console.log("error fetching events data");

@@ -3,8 +3,8 @@ import { ref } from "vue";
 import componentCard from "@/components/componentCard.vue";
 import { useRouter } from "vue-router";
 const router = useRouter();
-const toHomePage = () => {
-  router.push("/");
+const toRoutingPage= () => {
+  router.push("/routingdashboard");
 };
 const tobasicscard = () => {
   router.push("/basicsdashboard");
@@ -18,7 +18,7 @@ function handlemsg(data) {
 <template>
   <div class="basicsProjects">
     <button @click="tobasicscard">back</button>
-    <button @click="toComponentsPage">next</button>
+    <button @click="toRoutingPage">next</button>
     <h3>Components Implementations</h3>
     <span>step by step</span>
     <componentCard @view="handlemsg" />
