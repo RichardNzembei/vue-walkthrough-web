@@ -13,13 +13,12 @@ const toggleDropdown = () => {
   <div class="dropdown-container">
     <button @click="toggleDropdown" class="dropdown-button">Menu</button>
     <div v-if="isDropdownOpen" class="dropdown-menu">
-      <RouterLink to="/projectsdashboard" class="dropdown-item"
-        >Projects</RouterLink
-      >
-      <a href="https://github.com/RichardNzembei" class="dropdown-item"
-        >Github</a
-      >
-      <a href="https://vuejs.org/" class="dropdown-item">Documentation</a>
+      <RouterLink to="/projectsdashboard" class="dropdown-item"><img src="../assets/images/projecticon.png" alt="" class="icon"> Projects</RouterLink>
+      
+     
+      <a href="https://github.com/RichardNzembei" class="dropdown-item"><img src="../assets/images/github.png" alt="github icon" class="icon"> Github</a>
+      <span class="icon icon-docs"></span>
+      <a href="https://vuejs.org/" class="dropdown-item"><img src="../assets/images/docs.png" alt="documentation icon" class="icon"> Documentation</a>
     </div>
   </div>
 </template>
@@ -27,6 +26,19 @@ const toggleDropdown = () => {
   
   
   <style scoped>
+  .drops{
+    display: flex;
+  }
+ .icon {
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+ 
+  margin: 1px 0 0;
+  object-fit: cover;
+}
+
+
 .dropdown-container {
   position: relative;
   display: inline-block;
@@ -55,6 +67,7 @@ const toggleDropdown = () => {
   border-radius: 5px;
   z-index: 1;
   margin: 4px;
+  width: max-content;
 }
 
 .dropdown-item {
@@ -66,6 +79,7 @@ const toggleDropdown = () => {
 
 .dropdown-item:hover {
   color: blue;
+  background-color: aliceblue;
 }
 </style>
   
