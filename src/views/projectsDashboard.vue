@@ -9,7 +9,7 @@ const toHomePage = () => {
 </script>
 <template>
   <div class="basicsProjects">
-    <button @click="toHomePage">back</button>
+    <button @click="toHomePage">Home</button>
 
     <h3>Live projects</h3>
     <span class="message"
@@ -103,10 +103,11 @@ const toHomePage = () => {
 }
 .livebutton {
   text-decoration: none;
-
+  color: #fff;
+  background: linear-gradient(315deg, #42d392 25%, #647eff);
   padding: 3px;
   border-radius: 5px;
-  background-color: rgb(183, 200, 209);
+  
 }
 .basicsProjects {
   background-color: rgb(252, 249, 249);

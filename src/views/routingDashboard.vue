@@ -4,25 +4,29 @@ const router = useRouter();
 const toComponentsPage= () => {
   router.push("/componentsdashboard");
 };
-
+const toHomepage=()=>{
+  router.push('/')
+}
 </script>
 <template>
     <div class="basicsProjects">
     <button @click="toComponentsPage">back</button>
-    <button @click="toHomepage">next</button>
+    <button @click="toHomepage">Home</button>
     <h3>Routing Diagram </h3>
     <div>
     
       <svg width="100%" height="600">
  
  
-  <rect class="dashboard-box" x="50" y="50" width="500" height="200" fill="lightblue"></rect>
-  <text x="100" y="80" font-size="26" font-weight="bold">Landing Page</text>
+  <rect class="dashboard-box" x="50" y="10" width="500" height="300" fill="lightblue"></rect>
+  <text x="200" y="40" font-size="26" font-weight="bold">Landing Page</text>
+  <text x="75" y="50" font-size="12">Menu</text>
   <text x="75" y="110" font-size="12">Vue Basics</text>
   <text x="250" y="110" font-size="12">Components</text>
   <text x="400" y="110" font-size="12">Routing</text>
 
- 
+  <rect class="landing-button" x="55" y="60" width="60" height="30"></rect>
+  <text x="60" y="80" font-size="12">Projects</text>
   <rect class="landing-button" x="75" y="130" width="110" height="30"></rect>
   <text x="80" y="150" font-size="12">Implementations</text>
   <rect class="landing-button" x="250" y="130" width="110" height="30"></rect>
@@ -39,8 +43,10 @@ const toComponentsPage= () => {
   <text x="680" y="230" font-size="16" font-weight="bold">Components Dashboard</text>
 
 
-  <rect class="dashboard-box" x="650" y="450" width="300" height="100" fill="lightcoral"></rect>
+  <rect class="dashboard-box" x="650" y="450" width="300" height="200" fill="lightcoral"></rect>
   <text x="690" y="470" font-size="16" font-weight="bold">Routing Dashboard</text>
+  <rect class="dashboard-box" x="40" y="450" width="300" height="100" fill="lightcoral"></rect>
+  <text x="80" y="470" font-size="16" font-weight="bold">Projects Dashboard</text>
 
  
   <path d="M440 160 L650 430" stroke="black" stroke-width="2" marker-end="url(#arrowhead)" />
@@ -48,12 +54,16 @@ const toComponentsPage= () => {
   <path d="M185 150 L630 70" stroke="black" stroke-width="2" marker-end="url(#arrowhead)" />
 
   <path d="M850 100 L850 180" stroke="black" stroke-width="2" marker-end="url(#arrowhead)" />
-  
+  <rect class="landing-button" x="75" y="130" width="110" height="30"></rect>
+  <text x="80" y="150" font-size="12">Implementations</text>
   <path d="M850 280 L850 430" stroke="black" stroke-width="2" marker-end="url(#arrowhead)" />
-
+  <path d="M700 100 L570 100" stroke="black" stroke-width="2" marker-end="url(#arrowhead)" />
   <path d="M700 250 L700 150" stroke="black" stroke-width="2" marker-end="url(#arrowhead)" />
   <path d="M700 520 L700 320" stroke="black" stroke-width="2" marker-end="url(#arrowhead)" />
-
+  <path d="M500 570 L500 330" stroke="black" stroke-width="2" marker-end="url(#arrowhead)" />
+  <path d="M850 570 L520 570" stroke="black" stroke-width="2" marker-end="url(#arrowhead)" />
+  <path d="M280 500 L280 330" stroke="black" stroke-width="2" marker-end="url(#arrowhead)" />
+  <path d="M60 90 L60 430" stroke="black" stroke-width="2" marker-end="url(#arrowhead)" />
   <rect class="dashboard-button" x="680" y="80" width="50" height="30"></rect>
   <text x="690" y="100" font-size="12">Back</text>
   <rect class="dashboard-button" x="830" y="80" width="50" height="30"></rect>
@@ -68,9 +78,11 @@ const toComponentsPage= () => {
 
   <rect class="dashboard-button" x="680" y="500" width="50" height="30"></rect>
   <text x="690" y="520" font-size="12">Back</text>
-  <rect class="dashboard-button" x="830" y="500" width="50" height="30"></rect>
-  <text x="840" y="520" font-size="12">Next</text>
-
+  <rect class="dashboard-button" x="830" y="550" width="50" height="30"></rect>
+  <text x="840" y="570" font-size="12">Home</text>
+  
+  <rect class="dashboard-button" x="250" y="500" width="50" height="30"></rect>
+  <text x="260" y="520" font-size="12">Home</text>
   
   <defs>
     <marker id="arrowhead" markerWidth="10" markerHeight="7" refX="0" refY="3.5" orient="auto">
